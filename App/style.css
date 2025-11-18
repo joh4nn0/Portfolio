@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #a855f7;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color:#fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    border: 4px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}  
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5);
+}   
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+input, textarea, select {
+    font-family: inherit;
+}
+/*-------------------- Navigation Bar Styles -----------------------------------*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Reduce vertical padding and enforce a consistent nav height */
+    padding: 0.5rem 2rem;
+    min-height: 64px;
+    background-color:#f8f9fa;
+
+}
+nav .logo {
+    /* smaller, consistent logo height and center inside the flex container */
+    height: 40px;
+    display: block;
+    align-self: center;
+}
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+nav .nav-links a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    /* ensure anchors are vertically centered inside the nav */
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: 0.25rem 0;
+}
+nav .nav-links a:hover {
+    color: var(--secondary-color);
+}
+nav .nav-links li {
+    display: inline;
+}  
+nav button {
+    margin-left: 1rem;
+    /* make the button align vertically and match nav height visually */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 1rem;
+    /* thinner border so button doesn't look oversized */
+    border-width: 2px;
+}
+.nav-buttons {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+
+/*-------------------- End of Navigation Bar Styles ----------------------------*/
+/*-------------------- footer styles -------------------------------------------*/
+footer {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    bottom: 0;
+}   
+footer p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}   
+/*-------------------- End of footer styles ------------------------------------*/
+.presentation {
+    padding: 2rem;
+    color: #fff;
+    --mid-color: #7c3aed;
+    --end-color: #ff00f2;
+    --start-color: #140e7e;
+    background: linear-gradient(to right, var(--start-color),var(--primary-color), var(--mid-color), var(--secondary-color), var(--end-color));
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}   
+.presentation img {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin-left: 2rem;
+    border-radius: 8px;
+    border: 2rem solid rgba(248, 249, 250, 0.6);
+    /* ajouter une fine ligne de 2px à l'extérieur de la bordure existante */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255);
+}
+.presentation .txt-presentation {
+    max-width: 60%;
+    text-align: left;
+    margin: auto; /* Center the text horizontally */
+    padding: 1rem; /* Added padding for improved layout */
+    text-align: left; /* Center the text within the container */
+}
+section {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;  
+}
+.content {
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    padding: 1rem;
+    flex: 1;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center  ;
+}
+.content h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+.content p {
+    color: var(--text-color);
+    line-height: 1.5;
+}
