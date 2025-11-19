@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <img src="logo.png" alt="Logo du Portfolio" class="logo">
+            <img src="/Asset/img/logo.jpg" alt="Logo du Portfolio" class="logo">
             <ul class="nav-links">
                 <a href="/./../index.php"><li>Accueil</li></a>
                 <a href="/Public/pages/STI2D.php"><li>STI2D</li></a>

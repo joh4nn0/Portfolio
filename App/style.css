@@ -48,11 +48,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Reduce vertical padding and enforce a consistent nav height */
     padding: 0.5rem 2rem;
     min-height: 64px;
-    background-color:#f8f9fa;
-
+    background: rgba(255, 255, 255, 0.8);  /* clair translucide */
+    backdrop-filter: blur(10px); /* effet de flou pour le fond */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 nav .logo {
     /* smaller, consistent logo height and center inside the flex container */
@@ -143,26 +143,62 @@ footer p {
     padding: 1rem; /* Added padding for improved layout */
     text-align: left; /* Center the text within the container */
 }
-section {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    padding: 2rem;  
-}
-.content {
-    border: 1px solid #ddd;
-    border-radius: 8px; 
+
+.bloc{
+    margin-bottom: 2rem;
+    border: 1px solid #ddd ;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
     padding: 1rem;
-    flex: 1;
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center  ;
-}
-.content h2 {
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-.content p {
-    color: var(--text-color);
+    background-color: #fff;
+    flex: 1 1 45%;
+    max-width: 40%;
+    overflow-y: auto;
+    max-height: 400px;
     line-height: 1.5;
+}
+.bloc img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+}
+.bloc h1{
+    margin: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+.bloc h2{
+    margin: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+.bloc p {
+    max-width: 65ch;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+}
+.bloc a{
+    text-align: center;
+}
+.bloc::-webkit-scrollbar {
+    width: 6px;
+}
+.bloc::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+.bloc:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+section{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: var(--background-color);
+    flex-wrap: wrap;
+    gap: 2rem;
 }
