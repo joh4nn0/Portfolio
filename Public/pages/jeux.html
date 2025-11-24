@@ -4,47 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="App/style.css">
+    <link rel="stylesheet" href="./../../App/style.css">
 </head>
 <body>
     <header>
         <nav>
             <img src="Asset/img/logo.jpg" alt="Logo du Portfolio" class="logo">
             <ul class="nav-links">
-                <a href="index.html"><li>Accueil</li></a>
-                <a href="Public/pages/STI2D.html"><li>STI2D</li></a>
-                <a href="Public/pages/BUT 1.html"><li>BUT 1</li></a>
-                <a href="Public/pages/BUT 2.html"><li>BUT 2</li></a
->               <a href="Public/pages/BUT 3.html"><li>BUT 3</li></a>
+                <a href="./../../index.html"><li>Accueil</li></a>
+                <a href="STI2D.html"><li>STI2D</li></a>
+                <a href="BUT 1.html"><li>BUT 1</li></a>
+                <a href="BUT 2.html"><li>BUT 2</li></a>
+                <a href="BUT 3.html"><li>BUT 3</li></a>
             </ul>
 
-            <select  class="nav-categories">
-                <option>Catégories</option>
-                <option><a href="web.html">WEB</a></option>
-                <option><a href="devlogiciel.html">Dev Logiciel</a></option>
-                <option><a href="jeux.html">jeux</a></option>
-                <option><a href="autres.html">Autres</a></option>
+            <select class="nav-categories" onchange="if (this.value) location.href=this.value;">
+                <option value="" disabled selected>Catégories</option>
+                <option value="web.html">WEB</option>
+                <option value="devlogiciel.html">Dev Logiciel</option>
+                <option value="jeux.html">Jeux</option>
+                <option value="autre.html">Autres</option>
             </select>
 
             <ul class="nav-buttons">
-                 <li><button type="button" onclick="window.location.href='Public/pages/Contact.html'">Contact</button></li>
-                 <li><button type="button" onclick="window.location.href='Public/pages/Admin.html'">Admin</button></li>
+                 <li><button type="button" onclick="window.location.href='Contact.html'">Contact</button></li>
+                 <li><button type="button" onclick="window.location.href='Admin.html'">Admin</button></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <section> 
+            <div class="bloc">
+                <h1>Octo-Verso</h1>
+                <p>
+                    Octo-Verso est un jeu de société que nous avons créé en groupe de 2 en Java. Les règles
+                    du jeu sont celles-ci : les joueurs reçoivent 12 lettres au départ et posent chacun un
+                    premier mot de 4 lettres sur le chevalet. Les 8 lettres du chevalet sont donc en place,
+                    à partir des 2 mots de 4 lettres collés. Le but du jeu est d'être le premier joueur à se
+                    débarrasser de toutes ses lettres.
+                </p>
+                <img src="/Public/images/but1/octoverso.png" alt="octo verso">
+                <p>Technologies utilisées : Java</p>
+                <a href="https://www.github.com/KevinDvlp/Octo-Verso" target="_blank">Voir le projet</a>
+            </div>
 
+            <div class="bloc">
+                <h1>Jeu de memori</h1>
+                <p>
+                    Le jeu de mémoire est un projet réalisé en VB. Nous devions donc créer un jeu de mémoire avec un timer, des scores, un tableau des scores. J'étais tout seul pour ce projet-là ; cependant, j'ai fini par me mettre avec 3 autres camarades pour faire un seul et unique projet commun à nous 4, avec plus de fonctionnalités. Je vous mets les liens vers les deux GitHub respectifs.
+                </p>
+                <img src="/Public/images/but1/memori.png" alt="jeu de memori">
+                <p>Technologies utilisées : VB</p>  
+                <a href="https://www.github.com/KevinDvlp/Jeu-de-memorie-VB" target="_blank">Voir le projet perso</a>
+                <a href="https://www.github.com/KevinDvlp/Jeu-de-memorie-VB-en-groupe" target="_blank">Voir le projet en groupe</a>
+            </div>
+        </section>
     </main>
-    <footer class="site-footer" >
-    <div class="container">
-        <p>2025 Mon Portfolio. Tous droits réservés.</p>
-        <p>
-            <a href="https://github.com/joh4nn0">GitHub</a> |
-            <a href="https://www.linkedin.com/in/johann-tixier-50b611349/" >LinkedIn</a>
-        </p>
-    </div>
-</footer>
 
+    <footer class="site-footer">
+        <div class="container">
+            <p>2025 Mon Portfolio. Tous droits réservés.</p>
+            <p>
+                <a href="https://github.com/joh4nn0">GitHub</a> |
+                <a href="https://www.linkedin.com/in/johann-tixier-50b611349/">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

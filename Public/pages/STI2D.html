@@ -6,60 +6,68 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./../../App/style.css">
 </head>
+
+<body>
+
     <header>
         <nav>
             <img src="./../../Asset/img/logo.jpg" alt="Logo du Portfolio" class="logo">
+
             <ul class="nav-links">
                 <a href="./../../index.html"><li>Accueil</li></a>
                 <a href="STI2D.html"><li>STI2D</li></a>
                 <a href="BUT 1.html"><li>BUT 1</li></a>
-                <a href="BUT 2.html"><li>BUT 2</li></a
->               <a href="BUT 3.html"><li>BUT 3</li></a>
+                <a href="BUT 2.html"><li>BUT 2</li></a>
+                <a href="BUT 3.html"><li>BUT 3</li></a>
             </ul>
-              <select  class="nav-categories">
-                <option>Catégories</option>
-                <option><a href="web.html">WEB</a></option>
-                <option><a href="devlogiciel.html">Dev Logiciel</a></option>
-                <option><a href="jeux.html">jeux</a></option>
-                <option><a href="autres.html">Autres</a></option>
+
+            <select class="nav-categories" onchange="if (this.value) location.href=this.value;">
+                <option value="" disabled selected>Catégories</option>
+                <option value="web.html">WEB</option>
+                <option value="devlogiciel.html">Dev Logiciel</option>
+                <option value="jeux.html">Jeux</option>
+                <option value="autre.html">Autres</option>
             </select>
+
             <ul class="nav-buttons">
-                 <li><button type="button" onclick="window.location.href='Contact.html'">Contact</button></li>
-                 <li><button type="button" onclick="window.location.href='Admin.html'">Admin</button></li>
+                <li><button type="button" onclick="window.location.href='Contact.html'">Contact</button></li>
+                <li><button type="button" onclick="window.location.href='Admin.html'">Admin</button></li>
             </ul>
         </nav>
     </header>
 
+    <main>
+        <section>
 
-<body>
-    <section >
-    <div class="bloc">
-        <h1>Site monster Hunter</h1>
-        <p> 
-           Le site Monster Hunter World est un site dédié au jeu vidéo Monster Hunter World,
+            <div class="bloc">
+                <h1>Site Monster Hunter</h1>
+                <p> 
+                        Le site Monster Hunter World est un site dédié au jeu vidéo Monster Hunter World,
             développé par Capcom. Le site présente le jeu, ses fonctionnalités, quelques monstres,
             et le système d'armes et d'équipement. Je l’ai réalisé dans le cadre d'un TP sur
             l'apprentissage du CSS et du HTML. Je l’ai réalisé durant ma première année de STI, c'est
-            donc mon plus vieux projet.
-        </p>
-        <iframe src="https://ton-site.github.io" width="100%" height="500px"></iframe>
-        <p>Technologies utilisées : HTML, CSS</p>
-        <a href="www.github.com/KevinDvlp/Monster-Hunter-World" target="_blank">Voir le projet</a>
-    </div>
-    <div class="bloc">
-        <h1>Site IUT Orsay</h1>
-        <p>
-           Dans le cadre d'un projet commun avec toute la classe, nous devions chacun présenter un établissement pour notre poursuite d'études.
+            donc mon plus vieux projet
+                </p>
+                <iframe src="https://joh4nn0.github.io/Site-Monster-hunter-world/index.html" width="100%" height="500px"></iframe>
+                <p>Technologies utilisées : HTML, CSS</p>
+                <a href="https://github.com/joh4nn0/Site-Monster-hunter-world" target="_blank">Voir le projet</a>
+            </div>
+
+            <div class="bloc">
+                <h1>Site IUT Orsay</h1>
+                <p>
+                     Dans le cadre d'un projet commun avec toute la classe, nous devions chacun présenter un établissement pour notre poursuite d'études.
             J'ai choisi de réaliser le site de l'IUT d'Orsay, car c'est le type d'études dans lequel je suis actuellement inscrit.
-        </p>
-       <iframe src="https://ton-site.github.io" width="100%" height="500px"></iframe>
-        <p>Technologies utilisées : HTML, CSS</p>
-        <a href="www.github.com/KevinDvlp/IUT-Orsay" target="_blank">Voir le projet</a>
-    </div>
-    <div class="bloc">
-        <h1>Site Orientation</h1>
-        <p>
-           Ce site a été réalisé à l'aide de tous les étudiants de STI2D de mon année, dans le cadre d'un projet commun.
+                </p>
+                <iframe src="https://joh4nn0.github.io/Site-pr-sentation-IUT-Orsay/" width="100%" height="500px"></iframe>
+                <p>Technologies utilisées : HTML, CSS</p>
+                <a href="https://github.com/joh4nn0/Site-pr-sentation-IUT-Orsay" target="_blank">Voir le projet</a>
+            </div>
+
+            <div class="bloc">
+                <h1>Site Orientation</h1>
+                <p>
+                               Ce site a été réalisé à l'aide de tous les étudiants de STI2D de mon année, dans le cadre d'un projet commun.
             Le but du site est de représenter un maximum de filières d'orientation post-bac pour les lycéens de STI2D.
             Durant le projet, nous avons dû être divisés en plusieurs groupes ; chaque groupe était chargé d'une technologie (HTML, CSS, PHP, SQL).
             Chaque étudiant a donc réalisé un site sur un établissement, comme moi avec l'IUT d'Orsay. Puis nous avons mis tous les sites en commun à l'aide du PHP.
@@ -67,24 +75,26 @@
             Mes autres camarades devaient, eux, faire soit un questionnaire visant à aider les lycéens dans leur choix d'orientation, soit la partie admin du site.
             Et d'autres devaient faire des tableaux à l'aide de requêtes SQL pour regrouper différentes informations.
             Malheureusement, le site n'a jamais été fini par faute de temps.
-                    </p>
-        <img src="/Public/images/sti2d/orientation.png" alt="site orientation">
-        <p>Technologies utilisées : HTML, CSS, PHP, SQL</p>
-        <a href="www.github.com/KevinDvlp/Site-Orientation" target="_blank">Voir le projet</a>
-    </div>
-    </section>
-</body>
+                </p>
+                <img src="/Asset/img/site pre1.png" alt="site orientation">
+                 <img src="/Asset/img/sitepre2.png" alt="site orientation">
+                  <img src="/Asset/img/sitepre3.png" alt="site orientation">
+                <p>Technologies utilisées : HTML, CSS, PHP, SQL</p>
+                <a href="www.github.com/KevinDvlp/Site-Orientation" target="_blank">Voir le projet</a>
+            </div>
 
+        </section>
+    </main>
 
-<footer class="site-footer" >
-    <div class="container">
-        <p><?php echo date('Y'); ?> Mon Portfolio. Tous droits réservés.</p>
-        <p>
-            <a href="https://github.com/joh4nn0">GitHub</a> |
-            <a href="https://www.linkedin.com/in/johann-tixier-50b611349/" >LinkedIn</a>
-        </p>
-    </div>
-</footer>
+    <footer class="site-footer">
+        <div class="container">
+            <p>2025 Mon Portfolio. Tous droits réservés.</p>
+            <p>
+                <a href="https://github.com/joh4nn0">GitHub</a> |
+                <a href="https://www.linkedin.com/in/johann-tixier-50b611349/">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>

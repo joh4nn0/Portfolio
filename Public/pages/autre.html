@@ -4,37 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="App/style.css">
+    <link rel="stylesheet" href="./../../App/style.css">
 </head>
 <body>
     <header>
         <nav>
             <img src="Asset/img/logo.jpg" alt="Logo du Portfolio" class="logo">
             <ul class="nav-links">
-                <a href="index.html"><li>Accueil</li></a>
-                <a href="Public/pages/STI2D.html"><li>STI2D</li></a>
-                <a href="Public/pages/BUT 1.html"><li>BUT 1</li></a>
-                <a href="Public/pages/BUT 2.html"><li>BUT 2</li></a
->               <a href="Public/pages/BUT 3.html"><li>BUT 3</li></a>
+                <a href="./../../index.html"><li>Accueil</li></a>
+                <a href="STI2D.html"><li>STI2D</li></a>
+                <a href="BUT 1.html"><li>BUT 1</li></a>
+                <a href="BUT 2.html"><li>BUT 2</li></a
+>               <a href="BUT 3.html"><li>BUT 3</li></a>
             </ul>
-
-         <select  class="nav-categories">
-                <option>Catégories</option>
-                <option><a href="web.html">WEB</a></option>
-                <option><a href="devlogiciel.html">Dev Logiciel</a></option>
-                <option><a href="jeux.html">jeux</a></option>
-                <option><a href="autres.html">Autres</a></option>
+            <select class="nav-categories" onchange="if (this.value) location.href=this.value;">
+                <option value="" disabled selected>Catégories</option>
+                <option value="web.html">WEB</option>
+                <option value="devlogiciel.html">Dev Logiciel</option>
+                <option value="jeux.html">Jeux</option>
+                <option value="autre.html">Autres</option>
             </select>
 
             <ul class="nav-buttons">
-                 <li><button type="button" onclick="window.location.href='Public/pages/Contact.html'">Contact</button></li>
-                 <li><button type="button" onclick="window.location.href='Public/pages/Admin.html'">Admin</button></li>
+                 <li><button type="button" onclick="window.location.href='Contact.html'">Contact</button></li>
+                 <li><button type="button" onclick="window.location.href='Admin.html'">Admin</button></li>
             </ul>
         </nav>
     </header>
 
     <main>
-
+    <div class="bloc1">
+        <h1>A venir...</h1>
+        <p>Aucun projet à afficher pour le moment.</p>
+    </div>
     </main>
     <footer class="site-footer" >
     <div class="container">

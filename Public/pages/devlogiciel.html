@@ -4,47 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="App/style.css">
+    <link rel="stylesheet" href="./../../App/style.css">
 </head>
 <body>
     <header>
         <nav>
             <img src="Asset/img/logo.jpg" alt="Logo du Portfolio" class="logo">
             <ul class="nav-links">
-                <a href="index.html"><li>Accueil</li></a>
-                <a href="Public/pages/STI2D.html"><li>STI2D</li></a>
-                <a href="Public/pages/BUT 1.html"><li>BUT 1</li></a>
-                <a href="Public/pages/BUT 2.html"><li>BUT 2</li></a
->               <a href="Public/pages/BUT 3.html"><li>BUT 3</li></a>
+                <a href="./../../index.html"><li>Accueil</li></a>
+                <a href="STI2D.html"><li>STI2D</li></a>
+                <a href="BUT 1.html"><li>BUT 1</li></a>
+                <a href="BUT 2.html"><li>BUT 2</li></a>
+                <a href="BUT 3.html"><li>BUT 3</li></a>
             </ul>
 
-           <select  class="nav-categories">
-                <option>Catégories</option>
-                <option><a href="web.html">WEB</a></option>
-                <option><a href="devlogiciel.html">Dev Logiciel</a></option>
-                <option><a href="jeux.html">jeux</a></option>
-                <option><a href="autres.html">Autres</a></option>
+            <select class="nav-categories" onchange="if (this.value) location.href=this.value;">
+                <option value="" disabled selected>Catégories</option>
+                <option value="web.html">WEB</option>
+                <option value="devlogiciel.html">Dev Logiciel</option>
+                <option value="jeux.html">Jeux</option>
+                <option value="autre.html">Autres</option>
             </select>
 
             <ul class="nav-buttons">
-                 <li><button type="button" onclick="window.location.href='Public/pages/Contact.html'">Contact</button></li>
-                 <li><button type="button" onclick="window.location.href='Public/pages/Admin.html'">Admin</button></li>
+                 <li><button type="button" onclick="window.location.href='Contact.html'">Contact</button></li>
+                 <li><button type="button" onclick="window.location.href='Admin.html'">Admin</button></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <section>
+            <div class="bloc">
+                <h1>Application de gestion d'absence</h1>
+                <p>
+                    Cette application a été développée durant ma première année de BUT informatique, c'était le premier vrai projet en C que j'ai réalisé.
+                    L'application permet de gérer les absences des étudiants dans un établissement scolaire.
+                    Nous avons réalisé ce projet en groupe de 2.
+                </p>
+                <img src="/Public/images/but1/absence.png" alt="application de gestion d'absence">
+                <p>Technologies utilisées : C</p>
+                <a href="https://www.github.com/KevinDvlp/Gestion-d-absence-C" target="_blank">Voir le projet</a>
+            </div>
 
+            <div class="bloc">
+                <h1>Projet labyrinthe</h1>
+                <p>
+                    Dans le cadre de la SAE 2.02, nous avons travaillé sur les graphes et les labyrinthes en Java.
+                    Le projet était divisé en deux grandes parties :
+                    Trouver les plus courts chemins dans un graphe à l'aide de l'algorithme de Dijkstra.
+                    Appliquer cet algorithme à des labyrinthes et afficher le résultat avec une animation graphique.
+                </p>
+                <img src="/Public/images/but1/labirinthe.png" alt="labyrinthe">
+                <p>Technologies utilisées : Java</p>
+                <a href="https://www.github.com/KevinDvlp/Projet-labirinthe" target="_blank">Voir le projet</a>
+            </div>
+        </section>
     </main>
-    <footer class="site-footer" >
-    <div class="container">
-        <p>2025 Mon Portfolio. Tous droits réservés.</p>
-        <p>
-            <a href="https://github.com/joh4nn0">GitHub</a> |
-            <a href="https://www.linkedin.com/in/johann-tixier-50b611349/" >LinkedIn</a>
-        </p>
-    </div>
-</footer>
 
+    <footer class="site-footer">
+        <div class="container">
+            <p>2025 Mon Portfolio. Tous droits réservés.</p>
+            <p>
+                <a href="https://github.com/joh4nn0">GitHub</a> |
+                <a href="https://www.linkedin.com/in/johann-tixier-50b611349/">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

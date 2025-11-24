@@ -9,17 +9,32 @@
     --background-color: #f8f9fa;
     --text-color: #333;
 }
+html, body{
+    height: 100%;
+    margin: 0;
+}
+main{
+    flex: 1;
+    align-items: center;   
+    display: flex;
+    justify-content: center;
+}
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color:#fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    color: var(--primary-color)
+    
 }
 
 button {
@@ -194,7 +209,7 @@ footer p {
     max-width: 40%;
     overflow-y: auto;
     max-height: 400px;
-    line-height: 1.5;
+    line-height: 1.5; 
 }
 .bloc img{
     max-width: 100%;
@@ -233,6 +248,60 @@ footer p {
     transform: translateY(-2px);
     transition: all 0.3s ease;
 }
+.bloc1 {
+    margin: 2rem auto;              /* Centre horizontalement */
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+    width: 80%;                      /* Largeur du bloc centré */
+    max-width: 900px;                /* Optionnel : limite max */
+    overflow-y: auto;
+    max-height: 400px;
+    line-height: 1.5;
+}
+
+.bloc1 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.bloc1 h1,
+.bloc1 h2 {
+    margin: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.bloc1 p {
+    max-width: 65ch;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+}
+
+.bloc1 a {
+    text-align: center;
+}
+
+.bloc1::-webkit-scrollbar {
+    width: 6px;
+}
+
+.bloc1::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.bloc1:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
 section{
     display: flex;
     justify-content: space-around;
@@ -244,7 +313,7 @@ section{
 .bloc iframe {
     width: 100%;       /* prend exactement la largeur du bloc */
     max-width: 100%;   /* jamais plus large que le bloc */
-    height: auto;      /* hauteur s’adapte au contenu */
+    height: 500px;      /* hauteur s’adapte au contenu */
     border: none;      /* supprime les bordures qui causent scroll */
     display: block;    /* supprime l’espace blanc en dessous */
 }

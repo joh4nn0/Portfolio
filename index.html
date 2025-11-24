@@ -18,12 +18,12 @@
 >               <a href="Public/pages/BUT 3.html"><li>BUT 3</li></a>
             </ul>
 
-          <select  class="nav-categories">
-                <option>Catégories</option>
-                <option><a href="web.html">WEB</a></option>
-                <option><a href="devlogiciel.html">Dev Logiciel</a></option>
-                <option><a href="jeux.html">jeux</a></option>
-                <option><a href="autres.html">Autres</a></option>
+            <select class="nav-categories" onchange="if (this.value) location.href=this.value;">
+                <option value="" disabled selected>Catégories</option>
+                <option value="Public/pages/web.html">WEB</option>
+                <option value="Public/pages/devlogiciel.html">Dev Logiciel</option>
+                <option value="Public/pages/jeux.html">Jeux</option>
+                <option value="Public/pages/autre.html">Autres</option>
             </select>
 
             <ul class="nav-buttons">
@@ -34,7 +34,7 @@
     </header>
 
 
-<main>
+<main1>
     <div class="presentation">
         <div class="txt-presentation">
             <h1>Bienvenue sur mon Portfolio</h1>

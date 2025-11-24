@@ -6,6 +6,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./../../App/style.css">
 </head>
+<body>
     <header>
         <nav>
             <img src="./../../Asset/img/logo.jpg" alt="Logo du Portfolio" class="logo">
@@ -13,16 +14,16 @@
                 <a href="./../../index.html"><li>Accueil</li></a>
                 <a href="STI2D.html"><li>STI2D</li></a>
                 <a href="BUT 1.html"><li>BUT 1</li></a>
-                <a href="BUT 2.html"><li>BUT 2</li></a
->               <a href="BUT 3.html"><li>BUT 3</li></a>
+                <a href="BUT 2.html"><li>BUT 2</li></a>
+                <a href="BUT 3.html"><li>BUT 3</li></a>
             </ul>
 
-          <select  class="nav-categories">
-                <option>Catégories</option>
-                <option><a href="web.html">WEB</a></option>
-                <option><a href="devlogiciel.html">Dev Logiciel</a></option>
-                <option><a href="jeux.html">jeux</a></option>
-                <option><a href="autres.html">Autres</a></option>
+            <select class="nav-categories" onchange="if (this.value) location.href=this.value;">
+                <option value="" disabled selected>Catégories</option>
+                <option value="web.html">WEB</option>
+                <option value="devlogiciel.html">Dev Logiciel</option>
+                <option value="jeux.html">Jeux</option>
+                <option value="autre.html">Autres</option>
             </select>
 
             <ul class="nav-buttons">
@@ -32,22 +33,21 @@
         </nav>
     </header>
 
-<body>
-    <div class="bloc">
-        <h1>A venir</h1>
-        <p>Aucun projet à afficher pour le moment.</p>
+    <main>
+        <div class="bloc1">
+            <h1>A venir...</h1>
+            <p>Aucun projet à afficher pour le moment.</p>
+        </div>
+    </main>
 
-    </div>
-
-<footer class="site-footer" >
-    <div class="container">
-        <p><?php echo date('Y'); ?> Mon Portfolio. Tous droits réservés.</p>
-        <p>
-            <a href="https://github.com/joh4nn0">GitHub</a> |
-            <a href="https://www.linkedin.com/in/johann-tixier-50b611349/" >LinkedIn</a>
-        </p>
-    </div>
-</footer>
-
+    <footer class="site-footer">
+        <div class="container">
+            <p>2025 Mon Portfolio. Tous droits réservés.</p>
+            <p>
+                <a href="https://github.com/joh4nn0">GitHub</a> |
+                <a href="https://www.linkedin.com/in/johann-tixier-50b611349/">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
