@@ -241,3 +241,10 @@ section{
     flex-wrap: wrap;
     gap: 2rem;
 }
+.bloc iframe {
+    width: 100%;       /* prend exactement la largeur du bloc */
+    max-width: 100%;   /* jamais plus large que le bloc */
+    height: auto;      /* hauteur s’adapte au contenu */
+    border: none;      /* supprime les bordures qui causent scroll */
+    display: block;    /* supprime l’espace blanc en dessous */
+}
