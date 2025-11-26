@@ -348,3 +348,20 @@ section{
     background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
     transform: translateY(-2px);
 }
+
+@media (max-width: 768px) {
+    .bloc, .bloc1, .presentation {
+        max-width: 100%;
+        flex: 1 1 100%;
+        margin: 1rem 0;
+    }
+    .presentation {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .presentation img {
+        max-width: 80%;
+        margin: 1rem 0;
+    }
+}
