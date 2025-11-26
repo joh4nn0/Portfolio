@@ -7,30 +7,38 @@
     <link rel="stylesheet" href="./../../App/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <img src="./../../Asset/img/logo.jpg" alt="Logo du Portfolio" class="logo">
-            <ul class="nav-links">
-                <a href="./../../index.html"><li>Accueil</li></a>
-                <a href="STI2D.html"><li>STI2D</li></a>
-                <a href="BUT 1.html"><li>BUT 1</li></a>
-                <a href="BUT 2.html"><li>BUT 2</li></a>
-                <a href="BUT 3.html"><li>BUT 3</li></a>
-           
+<header>
+    <nav>
+        <img src="./../../Asset/img/logo.jpg" alt="Logo du Portfolio" class="logo">
 
-            <select class="nav-categories" onchange="if (this.value) location.href=this.value;">
-                <option value="" disabled selected>Catégories</option>
-                <option value="web.html">WEB</option>
-                <option value="devlogiciel.html">Dev Logiciel</option>
-                <option value="jeux.html">Jeux</option>
-                <option value="autre.html">Autres</option>
-            </select>
-             </ul>
-            <ul class="nav-buttons">
-                 <li><button type="button" onclick="window.location.href='Contact.html'">Contact</button></li>
-            </ul>
-        </nav>
-    </header>
+        <ul class="nav-links">
+            <li><a href="./../../index.html">Accueil</a></li>
+            <li><a href="STI2D.html">STI2D</a></li>
+            <li><a href="BUT 1.html">BUT 1</a></li>
+            <li><a href="BUT 2.html">BUT 2</a></li>
+            <li><a href="BUT 3.html">BUT 3</a></li>
+
+            <li class="dropdown">
+                <button class="dropdown-btn">Catégories ▼</button>
+                <ul class="dropdown-menu">
+                    <li><a href="web.html">WEB</a></li>
+                    <li><a href="devlogiciel.html">Dev Logiciel</a></li>
+                    <li><a href="jeux.html">Jeux</a></li>
+                    <li><a href="autre.html">Autres</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="nav-buttons">
+            <li>
+                <button type="button" onclick="window.location.href='Contact.html'">
+                    Contact
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
+
 
     <main>
         <section>
@@ -42,7 +50,7 @@
                     Nous avons réalisé ce projet en groupe de 2.
                 </p>
                 <p>Technologies utilisées : C</p>
-                <a href="https://github.com/joh4nn0/site-Kdou" target="_blank">lien du Projet</a>                
+                <button type="button" onclick="window.open('https://github.com/joh4nn0/site-Kdou','_blank')" target="_blank">Code source</a>                
             </div>
 
             <div class="bloc">
@@ -54,7 +62,7 @@
                     Appliquer cet algorithme à des labyrinthes et afficher le résultat avec une animation graphique.
                 </p>
                 <p>Technologies utilisées : Java</p>
-                <a href="https://github.com/Tiago-pereira-de-barros/SAE-2.02" target="_blank">lien du Projet</a>
+                <button type="button" onclick="window.open('https://github.com/Tiago-pereira-de-barros/SAE-2.02','_blank')" target="_blank">Code source</a>
             </div>
         </section>
     </main>
@@ -69,4 +77,5 @@
         </div>
     </footer>
 </body>
+    <script src="./../../App/menuderoulant.js"></script>
 </html>

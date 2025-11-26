@@ -29,13 +29,10 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
-a {
+a{
     text-decoration: none;
-    color: inherit;
-    color: var(--primary-color)
-    
-} 
+    color: var(--secondary-color);
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
@@ -73,6 +70,14 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
 }
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
 nav .logo {
     height: 40px;
     display: block;
@@ -104,30 +109,60 @@ nav .nav-links li {
     display: flex;
     gap: 1rem;
 }
-.nav-categories {
-    appearance: none;
-    background: var(--secondary-color);
-    color: white;   
-    padding: 10px 40px 10px 15px;   
-    border-radius: 8px;
-    border: 1px solid var(--secondary-color);
-    font-size: 16px;
-    cursor: pointer;
-    position: relative;
-}
+/*-------------Menu deroulant---------------------------*/
+   
+    .dropdown {
+        position: relative;
 
-/* Icône flèche personnalisée */
-.nav-categories {
-    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 20px;
-}
+    }
+
+   
+    .dropdown-btn {
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+   
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none; 
+        flex-direction: column;
+        background-color: var(--background-color);
+        min-width: 150px;
+        padding: 8px 0;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        z-index: 100;
+    }
 
 
+    .dropdown-menu li {
+        list-style: none;
+    }
 
+    .dropdown-menu li a {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #333 !important;   /* couleur visible */
+        background: white;         /* si ton fond nav est translucide */
+       
+    }
+    .dropdown-menu li a:hover {
+        background: #f2f2f2;
+    }
 
+    .dropdown.active .dropdown-menu {
+        display: flex;
+    }
+
+/*-------------Menu deroulant fin ---------------------------*/
 /*-------------------- End of Navigation Bar Styles ----------------------------*/
+
 /*-------------------- footer styles -------------------------------------------*/
 footer {
     background-color: var(--secondary-color);
@@ -330,18 +365,100 @@ section{
     resize: vertical;
     min-height: 120px;
 }
+.nav-toggle {
+    display: none; /* caché sur desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
 
 @media (max-width: 768px) {
+    /* Hamburger visible */
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .nav-toggle span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: var(--primary-color);
+        border-radius: 2px;
+    }
+
+    /* Nav links et boutons cachés par défaut */
+    .nav-links,
+    .nav-buttons {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--background-color);
+        position: absolute;
+        top: 64px; /* sous la nav */
+        left: 0;
+        padding: 1rem 0;
+        z-index: 1000;
+    }
+
+    .nav-links li,
+    .nav-buttons li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Affichage quand menu actif */
+    .nav-links.active,
+    .nav-buttons.active {
+        display: flex;
+    }
+
+    /* Dropdown dans le menu mobile */
+    .dropdown-menu {
+        position: static; /* s’adapte au menu vertical */
+        box-shadow: none;
+        border-radius: 0;
+        flex-direction: column;
+        display: none; /* caché par défaut */
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: flex;
+    }
+
+    /* Contenu principal responsive */
     .bloc, .bloc1, .presentation {
         max-width: 100%;
         flex: 1 1 100%;
         margin: 1rem 0;
     }
+
     .presentation {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
     .presentation img {
         max-width: 80%;
         margin: 1rem 0;
