@@ -63,20 +63,26 @@ button:hover {
 }
 
 /*-------------------- Navigation Bar Styles -----------------------------------*/
+
+.nav-mobile {
+    display: none;
+}
 nav {
     display: flex;
     align-items: center;
     padding: 0px 5PX 0PX 5px;
     min-height: 64px;
-    background: rgba(255, 255, 255, 0.8);  /* clair translucide */
-    backdrop-filter: blur(10px); /* effet de flou pour le fond */
+    background: rgba(255, 255, 255, 0.8);  
+    backdrop-filter: blur(10px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    justify-content: space-between;
+     justify-content: space-between;
 }
-nav .logo {
+    
+.logo {
     height: 40px;
     display: block;
     align-self: center;
+    padding-left: 10px;
 }
 nav .nav-links {
     list-style: none;
@@ -106,6 +112,7 @@ nav .nav-links li {
 }
 .dropdown{
     position: relative;
+    margin-right: 10px;
 }
 .dropdown-menu {
     position: absolute;
@@ -182,15 +189,14 @@ footer p {
     margin-left: 2rem;
     border-radius: 8px;
     border: 2rem solid rgba(248, 249, 250, 0.6);
-    /* ajouter une fine ligne de 2px à l'extérieur de la bordure existante */
     box-shadow: 0 0 0 2px rgba(255, 255, 255);
 }
 .presentation .txt-presentation {
     max-width: 60%;
     text-align: left;
-    margin: auto; /* Center the text horizontally */
-    padding: 1rem; /* Added padding for improved layout */
-    text-align: left; /* Center the text within the container */
+    margin: auto; 
+    padding: 1rem; 
+    text-align: left; 
 }
 
 .bloc{
@@ -246,14 +252,14 @@ footer p {
 
 
 .bloc1 {
-    margin: 2rem auto;              /* Centre horizontalement */
+    margin: 2rem auto;            
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 8px;
     padding: 1rem;
     background-color: #fff;
-    width: 80%;                      /* Largeur du bloc centré */
-    max-width: 900px;                /* Optionnel : limite max */
+    width: 80%;                     
+    max-width: 900px;
     overflow-y: auto;
     max-height: 400px;
     line-height: 1.5;
@@ -353,6 +359,10 @@ section{
 }
 
 @media (max-width: 768px) {
+
+    .logo{
+        margin: 0;
+    }
     .bloc, .bloc1, .presentation {
         max-width: 100%;
         flex: 1 1 100%;
@@ -367,5 +377,66 @@ section{
         max-width: 80%;
         margin: 1rem 0;
     }
+    nav{
+        display: none;
+    }
+    .nav-mobile {
+        display: flex;
+         position: relative;
+       
+    }
+    .nav-links-mobile {
+        display: none;
+
+    }
+    .nav-mob-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100% ;
+        margin-top: 10px;
+        margin-bottom: 10px;
+       
+    }
+    .nav-links-mobile.show{
+        display: flex;
+        position: absolute;
+        top: 100%;     
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    .nav-links-mobile.show li{
+        padding: 5px;
+    }
+    .nav-links-mobile.show li:hover{
+        background-color: var(--background-color);
+        border-radius: 5px;
+    }
+    .nav-links-mobile.show a{
+        width: 100%;
+        height: 100%;
+        color: var(--text-color);
+        font-weight: 500;
+        transition: color 0.3s ease;
+        align-items: center;
+        height: 100%;
+        padding: 0.25rem 0;
+    }
+    .nav-links-mobile.show a:hover{
+        color: var(--secondary-color);
+    }
+    .nav-mob-header button{
+        margin-right: 10px;
+    }
+    
+  
+    
     
 }
